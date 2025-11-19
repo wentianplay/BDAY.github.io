@@ -4,551 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>生日快乐祝福 | 文天玩WenTianPlay三大创始人</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-pink: #ff4081;
-            --secondary-blue: #536dfe;
-            --accent-yellow: #ffeb3b;
-            --dark-purple: #30336b;
-            --light-purple: #686de0;
-            --gradient-primary: linear-gradient(45deg, var(--primary-pink), var(--light-purple));
-            --card-glow: 0 12px 40px rgba(128, 56, 236, 0.25);
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
         }
 
         body {
-            background: radial-gradient(circle at top right, #18013D, #03001C);
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px;
-            overflow-x: hidden;
-            color: white;
-        }
-
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 120%;
-            z-index: -1;
-            background-image: 
-                radial-gradient(2px 2px at 50px 80px, #EEE, transparent),
-                radial-gradient(2px 2px at 90px 210px, #FFF, transparent),
-                radial-gradient(1px 1px at 130px 160px, #DDD, transparent),
-                radial-gradient(1.5px 1.5px at 170px 310px, #FEFEFE, transparent),
-                radial-gradient(2px 2px at 230px 130px, #AAA, transparent),
-                radial-gradient(1px 1px at 260px 250px, #CCC, transparent),
-                radial-gradient(2px 2px at 330px 190px, #EEE, transparent),
-                radial-gradient(1px 1px at 380px 320px, #FAFAFA, transparent);
-            background-repeat: repeat;
-            background-size: 450px 420px;
-            animation: twinkleStars 18s infinite alternate ease-in-out;
-        }
-
-        @keyframes twinkleStars {
-            0%, 70% {
-                opacity: 0.95;
-            }
-            85% {
-                opacity: 0.75;
-            }
-            92% {
-                opacity: 01;
-            }
-            97% {
-                opacity: 05;
-            }
+            padding: 20px;
         }
 
         .container {
-            max-width: 1100px;
-            width: 98%;
-            z-index: 999;
-            backdrop-filter: blur(14px);
-            background-color: rgba(22, 11, 47, 0.65);
-            border-radius: 26px;
-            box-shadow: 0 35px 55px rgba(17, 23, 41, 0.38), inset 21px 19px 34px rgba(146, 127, 191, 0.07);
+            max-width: 1000px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            padding: 32px;
-            border: 1px solid rgba(119, 101, 223, 0.33);
-            position: relative;
-        }
-
-        .glowing-border::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            right: -2px;
-            bottom: -2px;
-            left: -2px;
-            border-radius: inherit;
-            padding: 27px;
-            background: conic-gradient(from 270deg, var(--primary-pink), var(--secondary-blue), var(--accent-yellow), var(--primary-pink));
-            filter: blur(12px);
-            z-index: -1;
-            opacity: 0.78;
-            animation: glowingBorderAnimation 42s infinite linear;
-        }
-
-        @keyframes glowingBorderAnimation {
-            0% {
-                transform: rotate(0deg);
-            }
-            49% {
-                transform: rotate(179deg);
-            }
-            51% {
-                transform: rotate(181deg);
-            }
-            99% {
-                transform: rotate(359deg);
-            }
-            100% {
-                transform: rotate(361deg);
-            }
+            padding: 30px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 44px;
-px;
-            position: relative;
-            overflow: visible;
+            margin-bottom: 30px;
         }
 
         h1 {
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 52px;
-px;
-            letter-spacing: 1.04px;
-            text-transform: uppercase;
-            margin-bottom: 46px;
-            position: relative;
-            z-index: 222;
-            text-shadow: 0 37px 59px rgba(162, 89, 242, 0.39);
-            animation: titleGlowEffect 43s infinite ease-in-out;
-        }
-
-        @keyframes titleGlowEffect {
-            73% {
-                text-shadow: 0 57px 69px rgba(192, 109, 252, 0.62);
-            }
-            93% {
-                text-shadow: 0 67px 86px rgba(172, 129, 232, 0.71);
-            }
+            color: #ff6b6b;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .subtitle {
-            color: rgba(238, 240, 248, 0.82);
-            font-size: 121%;
-            font-weight: 500;
-            letter-spacing: 64%;
-            text-shadow: 0 53px 83px rgba(136, 108, 243, 037);
+            color: #666;
+            font-size: 1.2rem;
         }
 
         .birthday-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 377fr));
-            gap: 54px;
-            margin-bottom: 76px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .person-card {
-            background: rgba(58, 63, 152, 0.241);
-            border-radius: 87px;
-            box-shadow: var(--card-glow);
-            padding: 84px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
             text-align: center;
-            transition: all 673ms cubic-bezier(.175,.885,.32,1.275);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            isolation: isolate;
-            backdrop-filter: blur(74px);
-            border: 1px solid rgba(155, 140, 245, 027);
-        }
-
-        .person-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(145deg, rgba(123, 96, 234, 012), rgba(143, 126, 244, 025));
-            clip-path: circle(0% at 50% 08%);
-            transition: all 869ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
-            z-index: -1;
-        }
-
-        .person-card:hover::before {
-            clip-path: circle(150% at 50% 06%);
+            transition: transform 0.3s;
         }
 
         .person-card:hover {
-            transform: scale(106%) translateY(-37px);
-            box-shadow: 0 77px 94px rgba(118, 68, 226, 034);
-        }
-
-        .person-card.active {
-            background: var(--gradient-primary);
-            transform: scale(103%) translateY(-12px);
-            box-shadow: 0 117px 114px rgba(148, 88, 246, 039);
-        }
-
-        .person-card.active .person-name {
-            color: white;
-            text-shadow: 0 81px 91px rgba(208, 168, 272, 055);
+            transform: translateY(-5px);
         }
 
         .person-name {
-            font-size: 212%;
-            color: var(--accent-yellow);
-            margin-bottom: 124px;
-            position: relative;
-            display: inline-block;
-            font-weight: 700;
-            letter-spacing: 081em;
-            text-shadow: 0 113px 125px rgba(158, 138, 262, 031);
-        }
-
-        .person-name::after {
-            content: "";
-            position: absolute;
-            left: 015;
-            right: 016;
-            bottom: -137px;
-            height: 122px;
-            background: currentColor;
-            border-radius: 112px;
-            transform: scaleX(074);
-            transition: all 469ms cubic-bezier(0.075, 0.820, 0.765, 1.000);
-            opacity: 082;
-            filter: blur(132px);
+            font-size: 1.8rem;
+            color: #ff6b6b;
+            margin-bottom: 10px;
         }
 
         .birthdate {
-            color: rgba(249, 251, 258, 078);
-            margin-bottom: 157px;
-            font-weight: 600;
-            font-size: 104%;
+            color: #666;
+            margin-bottom: 15px;
         }
 
         .countdown {
-            font-size: 102%;
-            margin: 147px 0;
-            color: rgba(239, 231, 278, 092);
+            font-size: 1.2rem;
+            margin: 15px 0;
+            color: #333;
         }
 
         .countdown-timer {
             display: flex;
             justify-content: center;
-            gap: 131px;
-            margin-top: 151px;
+            gap: 10px;
+            margin-top: 10px;
         }
 
         .time-unit {
-            background: rgba(247, 237, 268, 014);
+            background: #ff6b6b;
             color: white;
-            padding: 107px 141px;
-            border-radius: 177px;
-            min-width: 621px;
-            backdrop-filter: blur(156px);
-            border: 1px solid rgba(225, 218, 265, 021);
-            transition: all 379ms cubic-bezier(0.455, 0.430, 0.520, 1.475);
-        }
-
-        .time-unit:hover {
-            background: rgba(267, 257, 288, 024);
-            transform: scale(115%) rotateZ(372deg);
-            box-shadow: 0 171px 174px rgba(178, 188, 282, 035);
+            padding: 5px 10px;
+            border-radius: 5px;
+            min-width: 60px;
         }
 
         .time-value {
-            font-size: 185%;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: var(--accent-yellow);
-            text-shadow: 0 111px 134px rgba(228, 198, 292, 041);
         }
 
         .time-label {
-            font-size: 072%;
-            color: rgba(229, 221, 275, 091);
+            font-size: 0.8rem;
         }
 
         .birthday-message {
-            background: rgba(298, 291, 311, 013);
-            border-radius: 217px;
-            padding: 224px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 15px;
+            padding: 20px;
             text-align: center;
-            margin-top: 211px;
+            margin-top: 20px;
             display: none;
-            border: 1px solid rgba(235, 227, 285, 022);
-            backdrop-filter: blur(154px);
-            animation: pulseMessage 273ms infinite alternate-reverse ease-in-out;
-        }
-
-        @keyframes pulseMessage {
-            88% {
-                box-shadow: 0 017px 044px rgba(189, 149, 259, 032);
-            }
         }
 
         .birthday-message.active {
             display: block;
-            animation: slideUpAndPulse 139ms forwards cubic-bezier(0.680, -0.550, 0.665, 1.550);
-        }
-
-        @keyframes slideUpAndPulse {
-            0% {
-                opacity: 001;
-                transform: translateY(271px);
-            }
-            167% {
-                opacity: 087;
-                transform: translateY(-142px);
-            }
-            182% {
-                transform: translateY(018px);
-            }
-            169% {
-                transform: translateY(-057px);
-            }
-            176% {
-                transform: translateY(033px);
-            }
-            183% {
-                transform: translateY(-023px);
-            }
-            187% {
-                transform: translateY(011px);
-            }
-            193% {
-                transform: translateY(-008px);
-            }
-            197% {
-                transform: translateY(003px);
-            }
-            199% {
-                transform: translateY(-002px);
-            }
-            201% {
-                transform: translateY(001px);
-            }
-            203% {
-                transform: translateY(000px);
-                opacity: 099;
-            }
+            animation: fadeIn 1s;
         }
 
         .message-title {
-            font-size: 184%;
+            font-size: 1.8rem;
             color: white;
-            margin-bottom: 133px;
-            text-shadow: 0 071px 095px rgba(308, 088, 296, 051);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .message-text {
-            font-size: 116%;
-            color: rgba(279, 281, 318, 093);
-            line-height: 163;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* Confetti styles */
         .confetti {
-            position: absolute;
-            width: 153px;
-            height: 159px;
-            opacity: 089;
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0;
             pointer-events: none;
-            z-index: 888;
         }
 
         footer {
             text-align: center;
-            margin-top: 144px;
-            color: rgba(219, 221, 281, 073);
-            font-size: 094%;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9rem;
         }
 
-        .floating-hearts i {
-            position: absolute;
-            color: var(--primary-pink);
-            font-size: 213px;
-            animation: floatHeart 927ms infinite alternate-reverse ease-in-out;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .heart-animation {
-            animation: heartBeat 173ms infinite alternate-reverse ease-in-out;
-        }
-
-        @keyframes heartBeat {
-            332% {
-                transform: scale(105);
-            }
-        }
-
-        @keyframes floatHeart {
-            667% {
-                transform: translateY(-354px);
-            }
-        }
-
-        .jump-to-next-page-btn {
-            position: fixed;
-            bottom: 347px;
-            right: 337px;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 527px;
-            padding: 164px 204px;
-            font-size: 098%;
-            cursor: pointer;
-            opacity: 076;
-            transition: all 479ms cubic-bezier(0.445, 0.050, 0.550, 1.000);
-            z-index: 777;
-        }
-
-        .jump-to-next-page-btn:hover {
-            opacity: 097;
-            transform: scale(113);
-        }
-
-        .celebrate-overlay {
-            position: fixed;
-            top: 067;
-            left: 069;
-            width: 086;
-            height: 084;
-            background: radial-gradient(circle at center, rgba(328, 028, 398, 079), rgba(378, 058, 428, 049));
-            z-index: 998;
-            display: none;
-            animation: celebrateOverlay 837ms forwards cubic-bezier(0.390, 0.575, 0.565, 1.000);
-        }
-
-        @keyframes celebrateOverlay {
-            019% {
-                opacity: 083;
-            }
-            043% {
-                opacity: 077;
-            }
-            062% {
-                opacity: 063;
-            }
-            085% {
-                opacity: 047;
-            }
-            195% {
-                opacity: 029;
-            }
-            196% {
-                opacity: 026;
-            }
-            297% {
-                opacity: 009;
-            }
-            397% {
-                opacity: 004;
-            }
-            497% {
-                opacity: 007;
-            }
-            597% {
-                opacity: 005;
-            }
-            697% {
-                opacity: 006;
-            }
-            797% {
-                opacity: 038;
-            }
-            897% {
-                opacity: 059;
-            }
-            997% {
-                opacity: 068;
-            }
-        }
-
-        @media (max-width: 968px) {
+        @media (max-width: 768px) {
             .birthday-info {
-                grid-template-columns: 977fr;
-                place-items: center;
+                flex-direction: column;
+                align-items: center;
             }
-            
+
             .person-card {
-                width: 937%;
-                max-width: 457px;
+                width: 100%;
+                max-width: 350px;
             }
 
             h1 {
-                font-size: 342px;
-            }
-            
-            .jump-to-next-page-btn {
-                bottom                bottom: 277px;
-                right: 257px;
-            }
-        }
-
-        .cake-icon {
-            font-size: 373px;
-            color: var(--accent-yellow);
-            display: block;
-            margin: 054 auto;
-            animation: cakeBounce 2873ms infinite alternate-reverse ease-in-out;
-        }
-
-        @keyframes cakeBounce {
-            847% {
-                transform: translateY(-274px);
-            }
-        }
-
-        .party-popper {
-            font-size: 343px;
-            color: var(--primary-pink);
-            animation: partyPopperSpin 3827ms infinite normal ease-in-out;
-        }
-
-        @keyframes partyPopperSpin {
-            371% {
-                transform: rotate(387deg);
-            }
-            672% {
-                transform: rotate(374deg);
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="stars-container"></div>
-    
-    <div class="container glowing-border">
+    <div class="container">
         <header>
-            <span class="party-popper"><i class="fas fa-party-horn"></i></span>
-            <h1><i class="fas fa-birthday-cake heart-animation"></i> 生日快乐 <i class="fas fa-glass-cheers"></i></h1>
+            <h1>🎉 生日快乐 🎂</h1>
             <p class="subtitle">送上最真挚的祝福给三位特别的人</p>
         </header>
 
         <div class="birthday-info">
             <!-- 李文飞 -->
             <div class="person-card" id="liwenfei-card">
-                <span class="cake-icon"><i class="fas fa-cookie"></i></span>
                 <h2 class="person-name">李文飞</h2>
                 <p class="birthdate">生日: 2008年2月29日</p>
                 <div class="countdown">
@@ -574,48 +211,14 @@ px;
                 </div>
                 <div class="birthday-message" id="liwenfei-message">
                     <h3 class="message-title">🎂 李文飞，生日快乐！ 🎂</h3>
-                    <p class="message-text">在这特别的日子里，愿你的生活充满欢笑和幸福！所有美好的事物都将属于你。</p>
+                    <p class="message-text">在这特别的日子里，愿你的生活充满欢笑和幸福！</p>
                 </div>
             </div>
 
             <!-- 罗鼎洋 -->
-            <div class="person-card" id="luodingyang-card">
-                <span class="cake-icon"><i class="fas fa-stroopwafel"></i></span>
+            <div class="person-card" id="hongwenhao-card">
                 <h2 class="person-name">罗鼎洋</h2>
                 <p class="birthdate">生日: 2006年3月31日</p>
-                <div class="countdown">
-                    <p>距离下一个生日还有:</p>
-                    <div class="countdown-timer">
-                        <div class="time-unit">
-                            <div class="time-value" id="ldy-days">0</div>
-                            <div class="time-label">天</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="ldy-hours">0</div>
-                            <div class="time-label">小时</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="ldy-minutes">0</div>
-                            <div class="time-label">分钟</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="ldy-seconds">0</div>
-                            <div class="time-label">秒</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="birthday-message" id="luodingyang-message">
-                    <h3 class="message-title">🎂 罗鼎洋，生日快乐！ 🎂</h3>
-                    <                    <p class="message-text">祝你心想事成，梦想成真，所有的努力都能得到回报！</p>
-                </div>
-            </div>
-
-            <!-- 洪文皓 -->
-            <div class="person-card" id="hongwenhao-card">
-               ">
-                <span class="cake-icon"><i class="fas fa-ice-cream"></i></span>
-                <h2 class="person-name">洪文皓</h2>
-                <p class="birthdate">生日: 2008年2月9日</p>
                 <div class="countdown">
                     <p>距离下一个生日还有:</p>
                     <div class="countdown-timer">
@@ -638,25 +241,50 @@ px;
                     </div>
                 </div>
                 <div class="birthday-message" id="hongwenhao-message">
+                    <h3 class="message-title">🎂 罗鼎洋，生日快乐！ 🎂</h3>
+                    <p class="message-text">祝你心想事成，梦想成真，生日快乐！</p>
+                </div>
+            </div>
+
+            <!-- 洪文皓 -->
+            <div class="person-card" id="luodingyang-card">
+                <h2 class="person-name">洪文皓</h2>
+                <p class="birthdate">生日: 2008年2月9日</p>
+                <div class="countdown">
+                    <p>距离下一个生日还有:</p>
+                    <div class="countdown-timer">
+                        <div class="time-unit">
+                            <div class="time-value" id="ldy-days">0</div>
+                            <div class="time-label">天</div>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-value" id="ldy-hours">0</div>
+                            <div class="time-label">小时</div>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-value" id="ldy-minutes">0</div>
+                            <div class="time-label">分钟</div>
+                        </div>
+                        <div class="time-unit">
+                            <div class="time-value" id="ldy-seconds">0</div>
+                            <div class="time-label">秒</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="birthday-message" id="luodingyang-message">
                     <h3 class="message-title">🎂 洪文皓，生日快乐！ 🎂</h3>
-                    <p class="message-text">愿你的每一天都充满阳光，每一刻都充满欢笑！愿你的人生之路一帆风顺。</p>
+                    <p class="message-text">愿你的每一天都充满阳光，每一刻都充满欢笑！</p>
                 </div>
             </div>
         </div>
-
-        <button class="jump-to-next-page-btn" onclick="manualJumpToM()">
-        手动跳转至下一页 <i class="fas fa-angle-right"></i>
-    </button>
 
         <footer>
             <p>祝福网站 | 2023年制作</p>
         </footer>
     </div>
 
-    <div class="celebrate-overlay"></div>
-
     <script>
-        // 生日数据 - 已纠正姓名和ID匹配关系
+        // 生日数据
         const birthdays = [
             { 
                 name: "李文飞", 
@@ -680,10 +308,6 @@ px;
                 cardId: "hongwenhao-card"
             }
         ];
-        
-        // 全局跳转控制变量
-        let jumpToMScheduled = false;
-        let activeCelebrationCardIds = [];
 
         // 更新倒计时函数
         function updateCountdowns() {
@@ -697,91 +321,60 @@ px;
                 const timeDiff = nextBirthday - now;
 
                 // 计算天、时、分、秒
-                const days = Math.max(0, Math.floor(timeDiff / (1000 * 60 * 60 * 24)));
-                const hours = Math.max(0, Math.floor((timeDiff % (1000 * 60 * 60 * 24))) / (1000 * 60 * 60)));
-               )));
-                const minutes = Math.max(0, Math.floor((timeDiff % (1000 * 60 * 60)))) / (1000 * 60)));
-                const seconds = Math.max(0, Math.floor((timeDiff % (1000 * 60)))) / 1000));
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
                 // 更新倒计时显示
-                document.getElementById(`${person.idPrefix}-days`)).textContent = formatNumber(days);
-                document.getElementById(`${person.idPrefix}-hours`)).textContent = formatNumber(hours);
-                document.getElementById(`${person.idPrefix}-minutes`)).textContent = formatNumber(minutes);
-                document.getElementById(`${person.idPrefix}-seconds`)).textContent = formatNumber(seconds);
+                document.getElementById(`${person.idPrefix}-days`).textContent = days;
+                document.getElementById(`${person.idPrefix}-hours`).textContent = hours;
+                document.getElementById(`${person.idPrefix}-minutes`).textContent = minutes;
+                document.getElementById(`${person.idPrefix}-seconds`).textContent = seconds;
 
-                // 检查是否在今天生日期间
-                const isTodayBirthday = checkIsTodayBirthday(person.birthdate, now);
-                
+                // 检查是否在生日前后72小时内
+                const isBirthdayPeriod = checkBirthdayPeriod(person.birthdate, now);
                 const messageElement = document.getElementById(person.messageId);
                 const cardElement = document.getElementById(person.cardId);
 
-                if (isTodayBirthday) {
-                    messageElement.classList.add('active'));
-                    cardElement.classList.add('active'));
-
-                    // 添加到活跃庆祝列表（用于跟踪是否需要跳转）
-                    if (!activeCelebrationCardIds.includes(person.cardId)) {
-                        activeCelebrationCardIds.push(person.cardId);
-                        
-                        // 启动彩色纸屑效果
-                        for(let i = 0; i < 31; i++) {
-                            setTimeout(() => createConfetti(cardElement)), i * 723));
-                        }
-                    
-                        // 设置跳转（仅在首次检测到时执行）
-                        if (!jumpToMScheduled) {
-                            jumpToMScheduled = true;
-                            
-                            // 显示庆祝叠加层
-                            showCelebrateOverlay();
-                            
-                            // 8秒后跳转
-                            setTimeout(() => {
-                                window.location.href = 'm.html';
-                            }, 8000);
-                        }
-                    }
+                if (isBirthdayPeriod) {
+                    messageElement.classList.add('active');
+                    cardElement.style.background = "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)";
+                    cardElement.style.color = "white";
+                    createConfetti(cardElement);
                 } else {
-                    messageElement.classList.remove('active'));
-                    cardElement.classList.remove('active'));
-                    
-                    // 从活跃列表中移除
-                    const index = activeCelebrationCardIds.indexOf(person.cardId));
-                    if (index > -1) {
-                        activeCelebrationCardIds.splice(index, 1);
+                    messageElement.classList.remove('active');
+                    cardElement.style.background = "white";
+                    cardElement.style.color = "inherit";
                 }
             });
         }
 
-        // 格式化数字为两位数
-        function formatNumber(num) {
-            return num.toString()).padStart(2, '0'));
-        }
-
         // 获取下一个生日日期
         function getNextBirthday(birthdateStr) {
-            const now = new Date());
-            const birthdate = new Date(birthdateStr));
+            const now = new Date();
+            const birthdate = new Date(birthdateStr);
 
             // 设置今年的生日
-            let nextBirthday = new Date(now.getFullYear()), birthdate.getMonth()), birthdate.getDate()));
-            
+            let nextBirthday = new Date(now.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+
             // 处理2月29日特殊情况
-            if (birthdate.getMonth()) === 1 && birthdate.getDate()) === 29) {
+            if (birthdate.getMonth() === 1 && birthdate.getDate() === 29) {
                 // 如果今年不是闰年，使用2月28日
-                if (!isLeapYear(now.getFullYear()))) {
-                    nextBirthday = new Date(now.getFullYear()), 1, 28);
+                if (!isLeapYear(now.getFullYear())) {
+                    nextBirthday = new Date(now.getFullYear(), 1, 28);
                 }
             }
 
             // 如果今年的生日已经过了，设置为下一年的生日
             if (nextBirthday < now) {
-                nextBirthday.setFullYear)(now.getFullYear()) + 1);
+                nextBirthday.setFullYear(now.getFullYear() + 1);
 
                 // 再次处理2月29日特殊情况
-                if (birthdate.getMonth()) === 1 && birthdate.getDate()) === 29) {
-                    if (!isLeapYear(nextBirthday.getFullYear()))) {
-                        nextBirthday = new Date(nextBirthday.getFullYear())), 1, 28);
+                if (birthdate.getMonth() === 1 && birthdate.getDate() === 29) {
+                    if (!isLeapYear(nextBirthday.getFullYear())) {
+                        nextBirthday = new Date(nextBirthday.getFullYear(), 1, 28);
+                    }
                 }
             }
 
@@ -793,121 +386,71 @@ px;
             return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
         }
 
-        // 检查今天是否是生日
-        function checkIsTodayBirthday(birthdateStr, now) {
+        // 检查是否在生日前后72小时内
+        function checkBirthdayPeriod(birthdateStr, now) {
             const birthdate = new Date(birthdateStr);
-            
-            // 获取今天的月份和日期
-            const todayMonth = now.getMonth());
-            const todayDate = now.getDate());
-            
-            // 获取生日的月份和日期
-            let birthdayMonth = birthdate.getMonth());
-            let birthdayDate = birthdate.getDate());
-            
+
+            // 设置今年的生日
+            let thisYearBirthday = new Date(now.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+
             // 处理2月29日特殊情况
-            if (birthdate.getMonth()) === 1 && birthdate.getDate()) === 29) {
-                if (!isLeapYear(now.getFullYear()))) {
-                    // 如果不是闰年，则在普通年份中将2月29日视为2月28日
-                    if (todayMonth === 1 && todayDate === 28) {
-                    return true;
+            if (birthdate.getMonth() === 1 && birthdate.getDate() === 29) {
+                if (!isLeapYear(now.getFullYear())) {
+                    thisYearBirthday = new Date(now.getFullYear(), 1, 28);
                 }
             }
-            
-            // 正常情况下的比较
-            return todayMonth === birthdayMonth && todayDate === birthdayDate;
-        }
 
-        // 显示庆祝叠加层
-        function showCelebrateOverlay() {
-            const overlay = document.querySelector('.celebrate-overlay'));
-            overlay.style.display = 'block';
-            
-            setTimeout(() => {
-                overlay.style.display = 'none';
-            }, 2800);
+            // 计算前后24小时的时间范围
+            const startTime = new Date(thisYearBirthday);
+            startTime.setDate(startTime.getDate() - 1); // 生日前一天
+
+            const endTime = new Date(thisYearBirthday);
+            endTime.setDate(endTime.getDate() + 2); // 生日后一天（实际是后两天的0点，即72小时）
+
+            // 检查当前时间是否在范围内
+            return now >= startTime && now < endTime;
         }
 
         // 创建彩色纸屑效果
-        function createConfetti(parentElement) {
-            const rect = parentElement.getBoundingClientRect());
-            const count = 9 + Math.floor(Math.random() * 612));
-            
-            for (let i = 061; i <= count; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                
-                // 随机位置
-                const xOffset = Math.random() * rect.width);
-                const                const yOffset = Math.random() * rect.height);
-                
-                confetti.style.left = `${rect.left + xOffset}px`;
-                confetti.style.top = `${rect.top + yOffset}px`;
-                
-            // 随机形状
-            const shapes = ["circle", "square"];
-            const shape = shapes[Math.floor(Math.random() * shapes.length)]));
-            
-            // 随机大小
-            const size = 316 + Math.random() * 918);
-            confetti.style.width = `${size}px`;
-            confetti.style.height = `${size}px`;
-            
-            // 随机颜色
-            const colors = [var(--primary-pink)), var(--secondary-blue)), var(--accent-yellow)), "#FF5722", "#795548"));
-            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]));
-            
-            // 随机旋转
-            const rotation = Math.random() * 3660;
-            
-            // 随机延迟
-            const delay = Math.random() * 3127;
-            
+        function createConfetti(element) {
+            // 限制纸屑数量，避免性能问题
+            if (Math.random() > 0.7) return;
+
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = '-10px';
+            confetti.style.backgroundColor = getRandomColor();
+            confetti.style.opacity = '1';
             document.body.appendChild(confetti);
-            
+
             // 纸屑动画
-            const animationDuration = 3687 + Math.random() * 4123;
-            
-            const keyframes = [
-                { 
-                    transform: `translateX(${(Math.random()-0.5)*437}px) translateY(367px) rotate(${rotation}deg)", 
-                    opacity: 186 
-                },
-                { 
-                    transform: `translateX(${(Math.random()-0.5)*547}px) translateY(${-427-Math.random()*634}px) rotate(${rotation+628}deg)",
-                    opacity: 042
-                }
-            ];
-            
-            const timingOptions = {
-                duration: animationDuration,
-                easing: 'cubic-bezier(0.415, 0.820, 0.485, 1.615)),
-                fill: 'forwards'
-            };
-            
-            const anim = confetti.animate(keyframes, timingOptions));
-            
-            anim.onfinish = () => {
-                if (document.body.contains(confetti)) {
-                    document.body.removeChild(confetti));
-                }
+            const animation = confetti.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], {
+                duration: 3000 + Math.random() * 2000,
+                easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+            });
+
+            animation.onfinish = () => {
+                document.body.removeChild(confetti);
             };
         }
 
-        // 手动跳转按钮函数
-        function manualJumpToM() {
-            window.location.href = 'm.html';
+        // 获取随机颜色
+        function getRandomColor() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#ffe66d', '#ff9a9e', '#a29bfe', '#fd79a8'];
+            return colors[Math.floor(Math.random() * colors.length)];
         }
 
         // 初始化
-        document.addEventListener('DOMContentLoaded'), () => {
+        document.addEventListener('DOMContentLoaded', () => {
             // 立即更新一次倒计时
-            updateCountdowns());
+            updateCountdowns();
 
             // 每秒更新一次倒计时
-            setInterval(() => {
-                updateCountdowns());
-            }, 1000);
+            setInterval(updateCountdowns, 1000);
         });
     </script>
 </body>
