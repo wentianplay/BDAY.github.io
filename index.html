@@ -521,7 +521,7 @@
 
             messageIndex = 1;
 
-            // 设置定时器，每3秒显示一条新消息
+            // 设置定时器，每2秒显示一条新消息
             messageInterval = setInterval(() => {
                 if (messageIndex < person.messages.length) {
                     modalMessage.textContent = person.messages[messageIndex];
@@ -530,13 +530,13 @@
                     // 所有消息显示完毕
                     clearInterval(messageInterval);
 
-                    // 8秒后跳转到m.html
+                    // 2秒后跳转到m.html
                     modalMessage.textContent = "即将跳转到更多祝福页面...";
                     redirectTimer = setTimeout(() => {
                         window.location.href = "m.html";
-                    }, 8000);
+                    }, 2000);
                 }
-            }, 3000);
+            }, 2000);
         }
 
         // 创建彩色纸屑效果
